@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import com.accenture.academico.g3bank.entity.Agencia;
 import com.accenture.academico.g3bank.entity.Conta;
 import com.accenture.academico.g3bank.repository.AgenciaRepository;
+import com.accenture.academico.g3bank.repository.ContaRepository;
 
 @Component
 public class Init implements ApplicationListener<ContextRefreshedEvent> {
@@ -22,7 +23,7 @@ public class Init implements ApplicationListener<ContextRefreshedEvent> {
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		Conta conta1 = new Conta(null, "12", 1.400, 123456);
-		Agencia agencia = new Agencia(null, "G3Bank Centro", "Rua Osvaldo Cruz, 1999", "(19)9999-9999", 24, conta1);
+		Agencia agencia = new Agencia(null, "G3Bank Centro", "Rua Osvaldo Cruz, 1999", "(19)9999-9999", 24);
 		
 		
 		agenciaRepo.saveAll(Arrays.asList(agencia));
