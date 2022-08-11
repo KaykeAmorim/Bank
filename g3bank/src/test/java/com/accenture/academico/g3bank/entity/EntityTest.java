@@ -8,8 +8,8 @@ import com.accenture.academico.g3bank.enums.TipoConta;
 
 public class EntityTest {
 	 @Test
-	 public void UserTest() {
-		 	Conta conta1 = new Conta(null, "1234", TipoConta.CORRENTE, 1400.00);
+	 public void ClienteTest() {
+		Conta conta1 = new Conta(null, "1234", TipoConta.CORRENTE, 1400.00);
 	        Cliente cliente = new Cliente(null,"Luana", "35877842307", 99999999, "luana@gmail.com", conta1);
 	        
 	        assertEquals("Luana", cliente.getNomeCliente());
